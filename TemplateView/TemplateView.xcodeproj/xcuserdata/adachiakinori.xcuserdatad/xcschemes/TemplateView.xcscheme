@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   version = "1.7">
+   <BuildAction
+      parallelizeBuildables = "NO"
+      buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E30F593059FA96189292E290"
+               BuildableName = "libTemplateView.a"
+               BlueprintName = "TemplateView"
+               ReferencedContainer = "container:TemplateView.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "NO"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E30F59B96BF4960A1DD83EC6"
+               BuildableName = "TemplateViewSample.app"
+               BlueprintName = "TemplateViewSample"
+               ReferencedContainer = "container:../TemplateViewSample/TemplateViewSample.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      buildConfiguration = "Debug">
+      <Testables>
+      </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "E30F59B96BF4960A1DD83EC6"
+            BuildableName = "TemplateViewSample.app"
+            BlueprintName = "TemplateViewSample"
+            ReferencedContainer = "container:../TemplateViewSample/TemplateViewSample.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+   </TestAction>
+   <LaunchAction
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Debug"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      allowLocationSimulation = "YES">
+      <PostActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "INFOPLIST=&apos;Info.plist&apos;&#10;FRAMEWORK_NAME=$(/usr/libexec/PlistBuddy -c &quot;Print CFBundleName&quot; ${INFOPLIST})&#10;FRAMEWORK_VERSION_NUMBER=$(/usr/libexec/PlistBuddy -c &quot;Print CFBundleShortVersionString&quot; ${INFOPLIST})&#10;FRAMEWORK_VERSION=A&#10;FRAMEWORK_BUILD_CONFIGURATION=&quot;Release&quot;&#10;FRAMEWORK_BUILD_PATH=&quot;${FRAMEWORK_BUILD_CONFIGURATION}&quot;&#10;FRAMEWORK_DIR=&quot;${FRAMEWORK_BUILD_PATH}/TemplateView.framework&quot;&#10;&#10;Type a script or drag a script file from your workspaceset -e&#10;&#10;rm -rf &quot;${FRAMEWORK_BUILD_CONFIGURATION}/${FRAMEWORK_NAME}.framework/Versions/A/Headers&quot;&#10;mkdir -p &quot;${FRAMEWORK_BUILD_CONFIGURATION}/${FRAMEWORK_NAME}.framework/Versions/A/Headers&quot;&#10;&#10;# Link the &quot;Current&quot; version to &quot;A&quot;&#10;/bin/ln -sfh A &quot;${FRAMEWORK_BUILD_CONFIGURATION}/${FRAMEWORK_NAME}.framework/Versions/Current&quot;&#10;/bin/ln -sfh Versions/Current/Headers &quot;${FRAMEWORK_BUILD_CONFIGURATION}/${FRAMEWORK_NAME}.framework/Headers&quot;&#10;/bin/ln -sfh &quot;Versions/Current/${FRAMEWORK_NAME}&quot; &quot;${FRAMEWORK_BUILD_CONFIGURATION}/${FRAMEWORK_NAME}.framework/${PRODUCT_NAME}&quot;&#10;&#10;# The -a ensures that the headers maintain the source modification date so that we don&apos;t constantly&#10;# cause propagating rebuilds of files that import these headers.&#10;/bin/cp -a TemplateView/TemplateView.h &quot;${FRAMEWORK_BUILD_CONFIGURATION}/${FRAMEWORK_NAME}.framework/Versions/A/Headers&quot;">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "E30F593059FA96189292E290"
+                     BuildableName = "libTemplateView.a"
+                     BlueprintName = "TemplateView"
+                     ReferencedContainer = "container:TemplateView.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+      </PostActions>
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "E30F59B96BF4960A1DD83EC6"
+            BuildableName = "TemplateViewSample.app"
+            BlueprintName = "TemplateViewSample"
+            ReferencedContainer = "container:../TemplateViewSample/TemplateViewSample.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+      <AdditionalOptions>
+      </AdditionalOptions>
+   </LaunchAction>
+   <ProfileAction
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Debug"
+      debugDocumentVersioning = "YES">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "E30F59B96BF4960A1DD83EC6"
+            BuildableName = "TemplateViewSample.app"
+            BlueprintName = "TemplateViewSample"
+            ReferencedContainer = "container:../TemplateViewSample/TemplateViewSample.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>
